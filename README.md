@@ -1,1 +1,0 @@
-# closed-caption-firefox-ext
