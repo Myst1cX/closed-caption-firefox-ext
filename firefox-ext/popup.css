@@ -169,7 +169,31 @@ input[type="range"]::-webkit-slider-runnable-track {
   background: transparent;
 }
 
-.block {
+#color-swatch-btn {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #555;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+#color-swatch-btn:hover {
+  border-color: #999;
+}
+
+#color-picker-container {
+  display: none;
+  padding: 8px;
+  background-color: #efefef;
+  border-top: 1px solid #444;
+}
+
+#color-picker-container table.jPicker {
+  margin: 0 auto;
+}
   display: block;
 }
 
