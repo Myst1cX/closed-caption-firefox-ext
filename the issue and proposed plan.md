@@ -1,4 +1,5 @@
 Folder 1: chrome-ext (original extension, meant for chrome, works flawlessly. 
+I believe inside content.js and content.js map are relevant references to text color selection and updating the subtitle color. Could be in other places too.. You can compare with firefox-ext, if it was ported well.
 Folder 2: firefox-ext (port of original extension. need to fix the text color feature. 
 Description of issue: The firefox-ext port has an issue with text color selector. 
 When I click on the default color which opens up the firefox color selection gui, the firefox-ext extension's ui closes automatically since it is no
