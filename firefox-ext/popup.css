@@ -216,3 +216,57 @@ a:link {
   color: #ffffff;
   text-decoration: none;
 }
+
+#color-picker-wrapper {
+  position: relative;
+}
+
+.color-swatch-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #6d6d6d;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.color-swatch-toggle:hover {
+  border-color: #ffffff;
+}
+
+.color-swatch-display {
+  width: 28px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #111111;
+}
+
+.color-picker-panel {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #2e2e2c;
+  border: 1px solid #6d6d6d;
+  border-radius: 4px;
+  padding: 6px;
+  z-index: 100;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #6d6d6d;
+}
+
+.color-swatch:hover {
+  transform: scale(1.15);
+  border-color: #ffffff;
+}
