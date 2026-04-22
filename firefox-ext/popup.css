@@ -194,6 +194,8 @@ input[type="range"]::-webkit-slider-runnable-track {
 #color-picker-container table.jPicker {
   margin: 0 auto;
 }
+
+.block {
   display: block;
 }
 
