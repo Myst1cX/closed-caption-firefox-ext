@@ -11,7 +11,6 @@ Proposed fix: Implementing a custom color picker which stays within the popup, s
 (so we no longer rely on native browser color picker). Inside zilla folder is a browser extension with such custom color picker that stays within popup.
 It is called jPicker and i would like you to implement it.
 Expectations: 
-1. Stays completely within the popup - No native browser color picker is used
 2. Provides a full color spectrum - Users can pick any color visually
 3. Includes hue slider - For precise color selection
 4. Has preset swatches - For quick common color selection
