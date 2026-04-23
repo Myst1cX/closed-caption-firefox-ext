@@ -189,6 +189,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   padding: 8px;
   background-color: #efefef;
   border-top: 1px solid #444;
+  /* The footer has margin-bottom: -10px which would pull the picker 10px up
+     into the footer, making its border and background overlap the footer and
+     causing the "slight deformation" visible when the picker opens.
+     A matching positive margin-top collapses with the footer's negative
+     margin-bottom (net = 0) so the two elements sit flush without overlap. */
+  margin-top: 10px;
 }
 
 #color-picker-container table.jPicker {
