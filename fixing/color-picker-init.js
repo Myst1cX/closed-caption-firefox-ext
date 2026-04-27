@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var swatchBtn = document.getElementById('color-swatch-btn');
   var hiddenInput = document.getElementById('text-color-picker');
   var container = document.getElementById('color-picker-container');
+  var translateController = document.querySelector('.translate_controller');
   var pickerInited = false;
 
   function toPickerHex(hexWithHash) {
@@ -30,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openPicker() {
     container.style.display = 'block';
+    translateController.classList.add('picker-open');
+    var langController = document.getElementById('language-controller');
+    if (langController && !langController.classList.contains('hidden')) {
+      langController.classList.add('hidden');
+    }
     if (!pickerInited) {
       var currentHex = hiddenInput.value || '#ffffff';
       var widget = $(container).find('.colorpicker-widget');
@@ -58,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
           setTimeout(fireInputEvent, 310);
           updateSwatch(hex);
           container.style.display = 'none';
+          translateController.classList.remove('picker-open');
         },
         /* live */ function (color) {
           if (color) {
@@ -70,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         /* cancel */ function () {
           container.style.display = 'none';
+          translateController.classList.remove('picker-open');
         }
       );
       pickerInited = true;
@@ -82,16 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
       openPicker();
     } else {
       container.style.display = 'none';
+      translateController.classList.remove('picker-open');
     }
   });
 
-  document.addEventListener('click', function (e) {
-    if (
-      container.style.display !== 'none' &&
-      !container.contains(e.target) &&
-      e.target !== swatchBtn
-    ) {
-      container.style.display = 'none';
-    }
-  });
 });
