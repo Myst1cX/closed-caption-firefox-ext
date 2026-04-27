@@ -1,6 +1,8 @@
 Project: Closed Caption Translation Extension (Firefox/Chrome)
 ===============================================================
 
+NOTE: already fixed, refer to FIX 2.md for new task.
+
 This is a browser extension that automatically translates video closed captions/subtitles on supported sites (YouTube, Udemy, Netflix, etc.) using the Google Translate API. The extension consists of:
 
 - **background.js** – listens for translation requests and forwards them to Google Translate.
