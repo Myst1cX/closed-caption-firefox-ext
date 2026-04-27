@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function openPicker() {
     container.style.display = 'block';
     translateController.classList.add('picker-open');
+    var langController = document.getElementById('language-controller');
+    if (langController && !langController.classList.contains('hidden')) {
+      langController.classList.add('hidden');
+    }
     if (!pickerInited) {
       var currentHex = hiddenInput.value || '#ffffff';
       var widget = $(container).find('.colorpicker-widget');
