@@ -94,14 +94,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.addEventListener('click', function (e) {
-    if (
-      container.style.display !== 'none' &&
-      !container.contains(e.target) &&
-      e.target !== swatchBtn
-    ) {
-      container.style.display = 'none';
-      translateController.classList.remove('picker-open');
-    }
-  });
 });
