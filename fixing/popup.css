@@ -1,22 +1,22 @@
 .popup_wrapper {
   display: flex;
   justify-content: center;
-  height: 220px;
-  max-height: 220px;
+  min-height: 220px;
   margin: -10px;
   background-color: #21211f;
   color: #ffffff;
 }
 
 .translate_controller {
-  height: 100%;
-  max-height: 220px;
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  overflow-y: visible;
   background-color: #21211f;
 }
 
 .language_controller {
-  height: 100%;
+  align-self: flex-start;
   max-height: 220px;
   overflow-y: scroll;
   background-color: #21211f;
@@ -101,10 +101,10 @@ input:checked + .slider:before {
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   width: 200px;
-  height: 25px;
+  min-height: 25px;
   padding: 15px;
 }
 
@@ -186,6 +186,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 #color-picker-container {
   display: none;
+  flex-shrink: 0;
   padding: 8px;
   background-color: #efefef;
   border-top: 1px solid #444;
@@ -193,6 +194,12 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 #color-picker-container table.jPicker {
   margin: 0 auto;
+}
+
+/* When the color picker is open, give the control rows more breathing room */
+.translate_controller.picker-open > .wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .block {
