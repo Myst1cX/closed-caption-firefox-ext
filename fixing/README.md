@@ -1,6 +1,6 @@
 # Closed Caption Firefox Extension (`fixing` folder)
 
-This is a Firefox browser extension that automatically translates video closed captions/subtitles on supported sites (YouTube, Udemy, Netflix, etc.) using the Google Translate API. It uses a custom in-popup color picker (jPicker) so the popup never loses focus during color selection.
+This is a Firefox browser extension that automatically translates video closed captions/subtitles on supported sites (YouTube, Udemy, Netflix, Frontend Masters, Epic React, TED, Three.js Journey, and Start) using the Google Translate API. It uses a custom in-popup color picker (jPicker) so the popup never loses focus during color selection.
 
 The extension consists of:
 
@@ -17,7 +17,7 @@ The extension consists of:
 
 - The popup sends messages via `browser.runtime` to the content script whenever the user changes font size, text color, language, or the translation toggle.
 - Settings are persisted in `browser.storage.sync` and restored automatically each time the popup opens.
-- Defaults are set in the `Model` class (`content.js`) and `PopupModel` class (`popup.js`): text color `#111111`, language `ko` (Korean), font size `25`, toggle initially off. After the first interaction, values are remembered via storage.
+- Defaults are set in the `Model` class (`content.js`) and `PopupModel` class (`popup.js`): text color `#ffffff` (white), language `en` (English), font size `25`, toggle initially off. After the first interaction, values are remembered via storage.
 
 ---
 
